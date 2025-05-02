@@ -445,39 +445,67 @@ const SimulationTab: React.FC<SimulationTabProps> = ({
       {/* How The Simulation Works */}
       <div className="bg-white p-6 rounded-lg shadow">
         <h2 className="text-xl font-semibold mb-4">How The Simulation Works</h2>
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-medium text-gray-900 mb-2">VACSIM Framework</h3>
-            <p className="text-gray-600">
-              Our simulation uses LLM-based agents to model complex human behavior and decision-making processes
-              in the context of vaccine hesitancy. Each agent is equipped with realistic cognitive capabilities
-              and social interaction patterns.
-            </p>
+        <div className="grid grid-cols-2 gap-8 relative">
+          {/* Part 1: Technical Implementation */}
+          <div className="space-y-4 border-r border-gray-200 pr-8 transform transition-all duration-500 hover:scale-105 hover:pr-12 hover:z-10 bg-white relative">
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">VaxVision Framework</h3>
+              <p className="text-gray-600">
+                Our simulation uses LLM-based agents to model complex human behavior and decision-making processes
+                in the context of vaccine hesitancy. Each agent is equipped with realistic cognitive capabilities
+                and social interaction patterns.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Information Processing</h3>
+              <p className="text-gray-600">
+                Agents process information through a sophisticated memory system that considers source credibility,
+                personal biases, and prior beliefs. This creates realistic patterns of information adoption and
+                attitude formation.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Social Network Influence</h3>
+              <p className="text-gray-600">
+                The simulation models social networks where agents influence each other's decisions through
+                peer pressure, social proof, and information sharing. This creates realistic cascading effects
+                in the population.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Policy Interventions</h3>
+              <p className="text-gray-600">
+                Different policy interventions (financial incentives, ambassador programs, mandates) are modeled
+                with varying effectiveness based on agent characteristics and social context. This allows for
+                realistic assessment of policy impacts.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-2">Information Processing</h3>
-            <p className="text-gray-600">
-              Agents process information through a sophisticated memory system that considers source credibility,
-              personal biases, and prior beliefs. This creates realistic patterns of information adoption and
-              attitude formation.
-            </p>
+
+          {/* Part 2: Ethical Considerations and Limitations */}
+          <div className="space-y-4 pl-8 transform transition-all duration-500 hover:scale-105 hover:pl-12 hover:z-10 bg-white relative">
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Ethical Considerations</h3>
+              <p className="text-gray-600">
+                Simulating human behavior for VaxVision requires balancing technological innovation with fundamental 
+                ethical principles including privacy protection, bias prevention, transparency in decision-making, 
+                and maintaining appropriate human oversight throughout the system's deployment.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Limitations and Real-World Applications</h3>
+              <p className="text-gray-600">
+                While lab simulations oversimplify real healthcare dynamics, VaxVision addresses this gap by:
+              </p>
+              <ul className="list-disc list-inside mt-2 text-gray-600 space-y-2">
+                <li>Integrating multimodal inputs (physiological, behavioral, verbal) for more realistic human-like responses</li>
+                <li>Using diverse AI agent models to minimize model bias and reflect varied patient behaviors</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-2">Social Network Influence</h3>
-            <p className="text-gray-600">
-              The simulation models social networks where agents influence each other's decisions through
-              peer pressure, social proof, and information sharing. This creates realistic cascading effects
-              in the population.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-2">Policy Interventions</h3>
-            <p className="text-gray-600">
-              Different policy interventions (financial incentives, ambassador programs, mandates) are modeled
-              with varying effectiveness based on agent characteristics and social context. This allows for
-              realistic assessment of policy impacts.
-            </p>
-          </div>
+
+          {/* Divider Line with Glow Effect */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-200 to-transparent transform -translate-x-1/2 transition-all duration-500 group-hover:opacity-75"></div>
         </div>
       </div>
     </div>

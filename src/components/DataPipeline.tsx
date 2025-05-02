@@ -239,8 +239,7 @@ const DataPipeline: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-2">Verification Process</h3>
             <p className="text-gray-700">
-              Our content verification process combines automated AI classification with human expert review.
-              Each piece of content is analyzed for factual accuracy, source credibility, and potential biases.
+              Our content verification process uses automated AI classification to analyze each piece of content for factual accuracy and source credibility.
             </p>
           </div>
           
@@ -260,6 +259,13 @@ const DataPipeline: React.FC = () => {
               <li>Evolving nature of COVID-19 research and information</li>
               <li>Challenges in detecting subtle forms of misinformation</li>
             </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-medium mb-2">Technology Stack</h3>
+            <p className="text-gray-700">
+              This dashboard uses <a href="https://crewai.com" target="_blank" rel="noopener noreferrer" className="underline">Crewai</a> for agentic AI orchestration and Llama 3.1 8B as the language model.
+            </p>
           </div>
         </div>
       </div>

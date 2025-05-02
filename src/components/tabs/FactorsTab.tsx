@@ -23,7 +23,7 @@ const cognitiveBiasesData = [
 const sourceCredibilityData = [
   { name: 'Scientific Journals', acceptance: 80 },
   { name: 'Mainstream News', acceptance: 65 },
-  { name: 'Social Media', acceptance: 20 },
+  { name: 'Social Media', acceptance: 67 },
   { name: 'Alternative Health Blogs', acceptance: 15 }
 ];
 
@@ -76,8 +76,17 @@ const FactorsTab: React.FC<FactorsTabProps> = ({ data }) => {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={cognitiveBiasesData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
-              <YAxis label={{ value: 'Hesitancy Impact (%)', angle: -90, position: 'insideLeft' }} />
+              <XAxis
+                dataKey="name"
+                angle={-45}
+                textAnchor="end"
+                height={100}
+                tick={{ fontSize: 12 }}
+              />
+              <YAxis
+                label={{ value: 'Hesitancy Impact (%)', angle: -90, position: 'left', dy: -50 }}
+                tick={{ fontSize: 12 }}
+              />
               <Tooltip />
               <Bar dataKey="impact" fill="#8884d8" />
             </BarChart>
@@ -109,7 +118,7 @@ const FactorsTab: React.FC<FactorsTabProps> = ({ data }) => {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={educationData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
+                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} tick={{ fontSize: 14 }} />
                 <YAxis label={{ value: 'Acceptance Rate (%)', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Bar dataKey="acceptance" fill="#FF8042" />
@@ -143,7 +152,7 @@ const FactorsTab: React.FC<FactorsTabProps> = ({ data }) => {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={politicalData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
+              <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} tick={{ fontSize: 12 }} />
               <YAxis label={{ value: 'Acceptance Rate (%)', angle: -90, position: 'insideLeft' }} />
               <Tooltip />
               <Bar dataKey="acceptance" fill="#0088FE" />
@@ -181,7 +190,7 @@ const FactorsTab: React.FC<FactorsTabProps> = ({ data }) => {
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={thinkingStyleData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
+                <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} tick={{ fontSize: 12 }} />
                 <YAxis label={{ value: 'Percentage (%)', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
                 <Legend />
